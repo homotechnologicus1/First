@@ -7,11 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Vehicle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+//        Vehicle *hello = [Vehicle new]; // create instance object
+        Vehicle *hello = [[Vehicle alloc]init]; // method chain
+        // [Receiver Message]
+        
+//        [hello setWheels:4];
+//        [hello setSeats:2];
+        hello.wheels = 4;
+        hello.seats = 2;
+        
+//        [hello print];
+//        NSLog(@"wheels : %i, seats : %i", [hello wheels], [hello seats]);
+        NSLog(@"wheels : %i, seats : %i", hello.wheels, hello.seats);
+        
+//        NSLog(@"wheels : %i, seats : %i", wheels, seats);
     }
     return 0;
 }
